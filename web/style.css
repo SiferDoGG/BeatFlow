@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a, #0a0a0a);
+    color: white;
+}
+
+/* центр */
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* карточка */
+.card {
+    width: 340px;
+    padding: 18px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+/* обложка */
+.cover {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* текст */
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.artist {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 14px;
+}
+
+/* кнопки управления */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.controls button {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.controls button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.controls .primary {
+    background: rgba(120, 90, 255, 0.3);
+    border-color: rgba(120, 90, 255, 0.5);
+}
+
+/* ===================== */
+/* SLIDERS */
+/* ===================== */
+
+input[type="range"] {
+    width: 100%;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* ===== SEEK ===== */
+#seek {
+    height: 6px;
+    margin-top: 6px;
+}
+
+#seek::-webkit-slider-runnable-track {
+    height: 6px;
+    background: linear-gradient(90deg, #7a5cff, #9b7bff);
+    border-radius: 999px;
+}
+
+#seek::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    margin-top: -4px;
+
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #7a5cff;
+
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(122, 92, 255, 0.6);
+    transition: 0.2s;
+}
+
+#seek::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* ===== VOLUME ===== */
+#volume {
+    height: 3px;
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+#volume::-webkit-slider-runnable-track {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+}
+
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    margin-top: -3.5px;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#volume::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: white;
+}
+
+/* сервисы */
+.services {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.service {
+    padding: 6px 10px;
+    border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 12px;
+}
+
+.service:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.service.active {
+    background: rgba(120, 90, 255, 0.35);
+    border-color: rgba(120, 90, 255, 0.6);
+}
+
+/* ===================== */
+/* SPOTIFY DISABLED */
+/* ===================== */
+
+.service.spotify,
+#spotify,
+[data-service="spotify"] {
+    pointer-events: none;
+    /* нельзя кликнуть */
+    opacity: 0.35;
+    /* приглушённый вид */
+    filter: grayscale(100%);
+    cursor: not-allowed;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Music Controller</title>
+    <link rel="stylesheet" href="/ui/style.css" />
+</head>
+
+<body>
+    <div class="app">
+
+        <div class="card">
+
+            <img id="cover" class="cover" src="" />
+
+            <div class="info">
+                <div id="title" class="title">No track</div>
+                <div id="artist" class="artist">---</div>
+            </div>
+
+            <div class="controls">
+                <button id="prev">⏮</button>
+                <button id="play" class="primary">⏯</button>
+                <button id="next">⏭</button>
+            </div>
+
+            <div class="seek">
+                <input id="seek" type="range" min="0" max="100" value="0" step="0.1" />
+            </div>
+
+            <div class="volume">
+                <input id="volume" type="range" min="0" max="1" step="0.01" />
+            </div>
+
+            <div class="services">
+                <button class="service active" data-service="yandex">Yandex</button>
+                <button class="service" data-service="spotify">Spotify</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/ui/index.js"></script>
+</body>
+
+</html>

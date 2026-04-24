@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Music Controller</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app">
+
+        <div class="player">
+
+            <!-- COVER -->
+            <img id="cover" class="cover" src="" alt="cover" />
+
+            <!-- INFO -->
+            <div class="info">
+                <div id="title" class="title">—</div>
+                <div id="artist" class="artist">—</div>
+            </div>
+
+            <!-- CONTROLS -->
+            <div class="controls">
+                <button onclick="prev()">⏮</button>
+                <button onclick="play()">▶ / ⏸</button>
+                <button onclick="next()">⏭</button>
+            </div>
+
+            <!-- VOLUME -->
+            <div class="slider">
+                <label>Volume</label>
+                <input type="range" min="0" max="1" step="0.01" onchange="setVolume(this.value)">
+            </div>
+
+            <!-- PROGRESS -->
+            <div class="slider">
+                <label>Progress</label>
+                <input type="range" min="0" max="1" step="0.01" onchange="setProgress(this.value)">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
